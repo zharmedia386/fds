@@ -13,8 +13,9 @@ class WelcomeController extends Controller
 {
     public function welcome()
     {
-        $fraudData = DB::table('fraud_data')->get();
-
+        $baseData = DB::table('base')->get();
+        dd($baseData);
+        
         return view('welcome', ['fraudData' => $fraudData]);
     }
 }
