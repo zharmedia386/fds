@@ -37,6 +37,7 @@ class BaseController extends Controller
                 'device_distinct_emails_8w' => 'required|numeric',
                 'device_fraud_count' => 'required|integer',
                 'month' => 'required|integer',
+                'predict_fraud_proba' => 'required|numeric',
             ]);
 
             $base = Base::create($data);

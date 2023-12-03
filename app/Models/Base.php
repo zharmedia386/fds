@@ -37,6 +37,7 @@ class Base extends Model
         'device_distinct_emails_8w',
         'device_fraud_count',
         'month',
+        'predict_fraud_proba',
     ];
 }
 

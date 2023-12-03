@@ -100,23 +100,65 @@
                         <table class="table tablesorter" id="dataTable">
                             <thead class="text-primary">
                                 <tr>
-                                    <th class="text-center">Transaction ID</th>
-                                    <th class="text-center">Name</th>
-                                    <th class="text-center">Country</th>
-                                    <th class="text-center">City</th>
-                                    <th class="text-center">Transaction Nominal</th>
-                                    <th class="text-center">Transaction Time</th>
+                                    <th class="text-center">income</th>
+                                    <th class="text-center">predict_fraud_proba</th>
+                                    <th class="text-center">name_email_similarity</th>
+                                    <th class="text-center">prev_address_months_count</th>
+                                    <th class="text-center">current_address_months_count</th>
+                                    <th class="text-center">customer_age</th>
+                                    <th class="text-center">days_since_request</th>
+                                    <th class="text-center">intended_balcon_amount</th>
+                                    <th class="text-center">zip_count_4w</th>
+                                    <th class="text-center">velocity_6h</th>
+                                    <th class="text-center">velocity_24h</th>
+                                    <th class="text-center">velocity_4w</th>
+                                    <th class="text-center">bank_branch_count_8w</th>
+                                    <th class="text-center">date_of_birth_distinct_emails_4w</th>
+                                    <th class="text-center">credit_risk_score</th>
+                                    <th class="text-center">email_is_free</th>
+                                    <th class="text-center">phone_home_valid</th>
+                                    <th class="text-center">phone_mobile_valid</th>
+                                    <th class="text-center">bank_months_count</th>
+                                    <th class="text-center">has_other_cards</th>
+                                    <th class="text-center">proposed_credit_limit</th>
+                                    <th class="text-center">foreign_request</th>
+                                    <th class="text-center">session_length_in_minutes</th>
+                                    <th class="text-center">keep_alive_session</th>
+                                    <th class="text-center">device_distinct_emails_8w</th>
+                                    <th class="text-center">device_fraud_count</th>
+                                    <th class="text-center">month</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @foreach($fraudData as $data)
                                     <tr>
-                                        <td class="text-center">{{ $data->transaction_id }}</td>
-                                        <td class="text-center">{{ $data->name }}</td>
-                                        <td class="text-center">{{ $data->country }}</td>
-                                        <td class="text-center">{{ $data->city }}</td>
-                                        <td class="text-center">{{ $data->transaction_nominal }}</td>
-                                        <td class="text-center">{{ $data->transaction_time }}</td>
+                                        <td class="text-center">{{ $data->income }}</td>
+                                        <td class="text-center">{{ $data->predict_fraud_proba }}</td>
+                                        <td class="text-center">{{ $data->name_email_similarity }}</td>
+                                        <td class="text-center">{{ $data->prev_address_months_count }}</td>
+                                        <td class="text-center">{{ $data->current_address_months_count }}</td>
+                                        <td class="text-center">{{ $data->customer_age }}</td>
+                                        <td class="text-center">{{ $data->days_since_request }}</td>
+                                        <td class="text-center">{{ $data->intended_balcon_amount }}</td>
+                                        <td class="text-center">{{ $data->zip_count_4w }}</td>
+                                        <td class="text-center">{{ $data->velocity_6h }}</td>
+                                        <td class="text-center">{{ $data->velocity_24h }}</td>
+                                        <td class="text-center">{{ $data->velocity_4w }}</td>
+                                        <td class="text-center">{{ $data->bank_branch_count_8w }}</td>
+                                        <td class="text-center">{{ $data->date_of_birth_distinct_emails_4w }}</td>
+                                        <td class="text-center">{{ $data->credit_risk_score }}</td>
+                                        <td class="text-center">{{ $data->email_is_free }}</td>
+                                        <td class="text-center">{{ $data->phone_home_valid }}</td>
+                                        <td class="text-center">{{ $data->phone_mobile_valid }}</td>
+                                        <td class="text-center">{{ $data->bank_months_count }}</td>
+                                        <td class="text-center">{{ $data->has_other_cards }}</td>
+                                        <td class="text-center">{{ $data->proposed_credit_limit }}</td>
+                                        <td class="text-center">{{ $data->foreign_request }}</td>
+                                        <td class="text-center">{{ $data->session_length_in_minutes }}</td>
+                                        <td class="text-center">{{ $data->keep_alive_session }}</td>
+                                        <td class="text-center">{{ $data->device_distinct_emails_8w }}</td>
+                                        <td class="text-center">{{ $data->device_fraud_count }}</td>
+                                        <td class="text-center">{{ $data->month }}</td>
                                     </tr>
                                 @endforeach
                             </tbody>
